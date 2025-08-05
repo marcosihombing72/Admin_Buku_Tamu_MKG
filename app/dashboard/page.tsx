@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Sidebar from "@/components/Sidebar";
-import HeaderDashboard from "@/components/HeaderDashboard";
-import StatCard from "@/components/StatCard";
 import GrafikPengunjung from "@/components/GrafikPengunjung";
+import HeaderDashboard from "@/components/HeaderDashboard";
 import PengunjungInstitusi from "@/components/PengunjungIntitusi";
+import Sidebar from "@/components/Sidebar";
+import StatCard from "@/components/StatCard";
+import { useEffect, useState } from "react";
 
 type FilterType = "today" | "week" | "month";
 
@@ -133,7 +133,7 @@ export default function DashboardPage() {
         }
 
         const baseURL =
-          "https://buku-tamu-mkg-datbase-production.up.railway.app/api/admin/buku-tamu";
+          "https://buku-tamu-mkg-database.vercel.app/api/admin/buku-tamu";
 
         const headers = {
           "Content-Type": "application/json",

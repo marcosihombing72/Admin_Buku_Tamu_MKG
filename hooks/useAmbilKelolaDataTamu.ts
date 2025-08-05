@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export interface DataTamuProps {
   ID_Buku_Tamu: string;
@@ -111,7 +111,7 @@ export function useAmbilDataTamu(filterOptions: FilterOptions = {}) {
       // Build parameters
       const params = buildRequestParams();
 
-      const url = `https://buku-tamu-mkg-datbase-production.up.railway.app/api/admin/buku-tamu?${params.toString()}`;
+      const url = `https://buku-tamu-mkg-database.vercel.app/api/admin/buku-tamu?${params.toString()}`;
 
       console.log("🚀 Mengirim request ke:", url);
       console.log("📋 Parameters:", Object.fromEntries(params));

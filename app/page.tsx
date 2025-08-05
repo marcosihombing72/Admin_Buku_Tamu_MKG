@@ -1,15 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import Image from "next/image";
 
 import BgPage from "@/components/BgPage";
 import Button from "@/components/Button";
 import CardLogin from "@/components/CardLogin";
 import Footer from "@/components/Footer";
 
-import { IoMail, IoLockClosed, IoEyeOff, IoEye } from "react-icons/io5";
+import { IoEye, IoEyeOff, IoLockClosed, IoMail } from "react-icons/io5";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -49,7 +49,7 @@ export default function Login() {
 
     try {
       const response = await fetch(
-        "https://buku-tamu-mkg-datbase-production.up.railway.app/api/admin/login",
+        "https://buku-tamu-mkg-database.vercel.app/api/admin/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

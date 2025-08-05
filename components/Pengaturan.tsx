@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Save, X } from "lucide-react";
 import clsx from "clsx";
+import { Save, X } from "lucide-react";
 import Image from "next/image";
-import { IoEyeOff, IoEye } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 import { toast } from "react-toastify";
 
 const tabs = ["General", "Security"];
@@ -171,7 +171,7 @@ export default function PengaturanAdmin() {
       }
 
       const res = await fetch(
-        "https://buku-tamu-mkg-datbase-production.up.railway.app/api/admin/update-profile",
+        "https://buku-tamu-mkg-database.vercel.app/api/admin/update-profile",
         {
           method: "PUT",
           headers: {
@@ -257,7 +257,7 @@ export default function PengaturanAdmin() {
           return;
         }
         const res = await fetch(
-          "https://buku-tamu-mkg-datbase-production.up.railway.app/api/admin/profile",
+          "https://buku-tamu-mkg-database.vercel.app/api/admin/profile",
           {
             method: "GET",
             headers: {
